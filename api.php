@@ -1,7 +1,7 @@
 <?php
     if($_SERVER['HTTP_ORIGIN'] == 'https://webappapi-server.azurewebsites.net'){
-        
-        $result = array('current_version'=> 376, 'required_version' => 376); 
+        $id = $_GET['id'] or null;
+        $result = array('id'=>$id, 'current_version'=> 376, 'required_version' => 376); 
         echo json_encode($result);
 
     }else{
